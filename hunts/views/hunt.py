@@ -289,7 +289,7 @@ class PuzzleView(RequiredPuzzleAccessMixin, View):
         given_answer = request.POST.get('answer', '')
         if given_answer == '':
             return JsonResponse({'error': 'no answer given'}, status=400)
-        if not given_answer.replace(" ","").isalnum():
+        if not given_answer.replace(" ","").replace("=","").isalnum():
             return JsonResponse({'error': 'do not disable client-side sanitization...'}, status=400)
 
         guess = Guess(

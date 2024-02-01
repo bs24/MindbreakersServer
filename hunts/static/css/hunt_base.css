@@ -228,9 +228,9 @@ img.fit-inside {
 .daypicture {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 12px;
   z-index: 0;
-  margin-left: -10px;
+/*  margin-left: -10px;*/
   height: 300px;
   overflow:hidden;
   display: flex;
@@ -238,6 +238,7 @@ img.fit-inside {
 
 .daypicture img{
     align-self: end;
+    width: 272px !important;
 }
 
 
